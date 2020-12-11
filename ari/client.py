@@ -192,7 +192,7 @@ class Client(object):
             # If there's only one field in the schema, just pass that along
             if len(obj_fields) == 1:
                 if obj:
-                    obj = obj.values()[0]
+                    obj = list(obj.values())[0]
                 else:
                     obj = None
             event_cb(obj, event, *args, **kwargs)
